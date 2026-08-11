@@ -6,17 +6,28 @@ Description: Contains DDL for all the tables realated to the EarlyON dataset
 
 Tables: 
 ====================================================================================
--- 1)  dbo.Province - Hugo
--- 2)  dbo.ServiceManager - Wyman
--- 3)  dbo.CityManager - Hugo
--- 4)  dbo.City - Wyman
--- 5)  dbo.Municipality - Hugo
--- 6)  dbo.CityLocation - Wyman
--- 7)  dbo.Location - Hugo
--- 8)  dbo.LocationAddress - Wyman
--- 9)  dbo.Address - Hugo
--- 10) dbo.AddressPostalCode - Wyman
--- 11) dbo.PostalCode - Hugo & Wyman
+-- 1)   dbo.Province - Hugo
+        dbo.Source_Province 
+-- 2)   dbo.ServiceManager - Wyman
+        dbo.Source_ServiceManager
+-- 3)   dbo.CityManager - Hugo
+        dbo.Source_CityManager        
+-- 4)   dbo.City - Wyman
+        dbo.Source_City
+-- 5)   dbo.Municipality - Hugo
+        dbo.Source_Municipality
+-- 6)   dbo.CityLocation - Wyman
+        dbo.Source_CityLocation
+-- 7)   dbo.Location - Hugo
+        dbo.Source_Location
+-- 8)   dbo.LocationAddress - Wyman
+        dbo.Source_LocationAddress
+-- 9)   dbo.Address - Hugo
+        dbo.Source_Address
+-- 10)  dbo.AddressPostalCode - Wyman
+        dbo.Source_AddressPostalCode
+-- 11)  dbo.PostalCode - Hugo & Wyman
+        dbo.Source_PostalCode
 ************************************************************************************/
 
 -- 1) dbo.Province - Hugo
@@ -41,6 +52,31 @@ BEGIN
         
         -- PRIMARY KEY constraint defined at the end
         CONSTRAINT PK_Province_ID PRIMARY KEY CLUSTERED ([ID] ASC)
+    );    
+END
+
+-- dbo.Source_Province
+
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Source_Province]') AND type in (N'U'))
+BEGIN
+    DROP TABLE [dbo].[Source_Province];   
+END
+
+BEGIN
+    CREATE TABLE [dbo].[Source_Province] (
+        -- Primary key with IDENTITY (auto-increment by 1)
+        [ID] INT IDENTITY(1,1) NOT NULL,
+        [Province] VARCHAR(300) NULL,
+        [ProvinceCode] VARCHAR(2) NULL,
+        
+        -- Audit columns with SQL Server predefined values
+        [CreatedDateTime] DATETIME2 NOT NULL DEFAULT GETDATE(),
+        [CreatedBy] VARCHAR(300) NOT NULL DEFAULT SUSER_SNAME(),
+        [ModifiedDateTime] DATETIME2 NOT NULL DEFAULT GETDATE(),
+        [ModifiedBy] VARCHAR(128) NOT NULL DEFAULT SUSER_SNAME(),
+        
+        -- PRIMARY KEY constraint defined at the end
+        CONSTRAINT PK_Source_Province_ID PRIMARY KEY CLUSTERED ([ID] ASC)
     );    
 END
 
