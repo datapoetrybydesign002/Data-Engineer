@@ -106,6 +106,30 @@ BEGIN
     );    
 END
 
+-- Source_ServiceManager
+
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Source_ServiceManager]') AND type in (N'U'))
+BEGIN
+    DROP TABLE [dbo].[Source_ServiceManager];    
+END
+
+BEGIN
+    CREATE TABLE [dbo].[Source_ServiceManager] (
+        -- Primary key with IDENTITY (auto-increment by 1)
+        [ID] INT IDENTITY(1,1) NOT NULL,
+        [Service_Manager] VARCHAR(300) NULL,
+        [ProvinceID] INT NULL,
+        
+        -- Audit columns with SQL Server predefined values
+        [CreatedDateTime] DATETIME2 NOT NULL DEFAULT GETDATE(),
+        [CreatedBy] VARCHAR(300) NOT NULL DEFAULT SUSER_SNAME(),
+        [ModifiedDateTime] DATETIME2 NOT NULL DEFAULT GETDATE(),
+        [ModifiedBy] VARCHAR(128) NOT NULL DEFAULT SUSER_SNAME(),
+        
+        -- PRIMARY KEY constraint defined at the end
+        CONSTRAINT PK_Source_ServiceManager_ID PRIMARY KEY CLUSTERED ([ID] ASC)
+    );    
+END
 
 -- 3)  dbo.CityManager - Hugo
 IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[CityManager]') AND type in (N'U'))
@@ -131,7 +155,30 @@ BEGIN
     );    
 END
 
+-- Source_CityManager
 
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Source_CityManager]') AND type in (N'U'))
+BEGIN
+    DROP TABLE [dbo].[Source_CityManager];    
+END
+
+BEGIN
+    CREATE TABLE [dbo].[Source_CityManager] (
+        -- Primary key with IDENTITY (auto-increment by 1)
+        [ID] INT IDENTITY(1,1) NOT NULL,
+        [ServiceManagerID] INT NULL,
+        [CityID] INT NULL,
+
+        -- Audit columns with SQL Server predefined values
+        [CreatedDateTime] DATETIME2 NOT NULL DEFAULT GETDATE(),
+        [CreatedBy] VARCHAR(300) NOT NULL DEFAULT SUSER_SNAME(),
+        [ModifiedDateTime] DATETIME2 NOT NULL DEFAULT GETDATE(),
+        [ModifiedBy] VARCHAR(128) NOT NULL DEFAULT SUSER_SNAME(),
+        
+        -- PRIMARY KEY constraint defined at the end
+        CONSTRAINT PK_Source_City_Manager_ID PRIMARY KEY CLUSTERED ([ID] ASC)
+    );    
+END
 
 
 -- 4)  dbo.City - Wyman
@@ -154,6 +201,30 @@ BEGIN
         
         -- PRIMARY KEY constraint defined at the end
         CONSTRAINT PK_City_ID PRIMARY KEY CLUSTERED ([ID] ASC)
+    );    
+END
+
+-- Source_City
+
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Source_City]') AND type in (N'U'))
+BEGIN
+    DROP TABLE [dbo].[Source_City];    
+END
+
+BEGIN
+    CREATE TABLE [dbo].[Source_City] (
+        -- Primary key with IDENTITY (auto-increment by 1)
+        [ID] INT IDENTITY(1,1) NOT NULL,
+        [City] VARCHAR(300) NULL,
+
+        -- Audit columns with SQL Server predefined values
+        [CreatedDateTime] DATETIME2 NOT NULL DEFAULT GETDATE(),
+        [CreatedBy] VARCHAR(300) NOT NULL DEFAULT SUSER_SNAME(),
+        [ModifiedDateTime] DATETIME2 NOT NULL DEFAULT GETDATE(),
+        [ModifiedBy] VARCHAR(128) NOT NULL DEFAULT SUSER_SNAME(),
+        
+        -- PRIMARY KEY constraint defined at the end
+        CONSTRAINT PK_Source_City_ID PRIMARY KEY CLUSTERED ([ID] ASC)
     );    
 END
 
@@ -180,6 +251,28 @@ BEGIN
     );    
 END
 
+-- Source_Municipality
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Source_Municipality]') AND type in (N'U'))
+BEGIN
+    DROP TABLE [dbo].[Source_Municipality];    
+END
+
+BEGIN
+    CREATE TABLE [dbo].[Source_Municipality] (
+        -- Primary key with IDENTITY (auto-increment by 1)
+        [ID] INT IDENTITY(1,1) NOT NULL,
+        [Municipality] VARCHAR(300) NULL,       
+
+        -- Audit columns with SQL Server predefined values
+        [CreatedDateTime] DATETIME2 NOT NULL DEFAULT GETDATE(),
+        [CreatedBy] VARCHAR(300) NOT NULL DEFAULT SUSER_SNAME(),
+        [ModifiedDateTime] DATETIME2 NOT NULL DEFAULT GETDATE(),
+        [ModifiedBy] VARCHAR(128) NOT NULL DEFAULT SUSER_SNAME(),
+        
+        -- PRIMARY KEY constraint defined at the end
+        CONSTRAINT PK_Source_Municipality_ID PRIMARY KEY CLUSTERED ([ID] ASC)
+    );    
+END
 
 -- 6)  dbo.CityLocation - Wyman
 IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[CityLocation]') AND type in (N'U'))
@@ -202,6 +295,30 @@ BEGIN
         
         -- PRIMARY KEY constraint defined at the end
         CONSTRAINT PK_City_Location_ID PRIMARY KEY CLUSTERED ([ID] ASC)
+    );    
+END
+
+-- Source_CityLocation
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Source_CityLocation]') AND type in (N'U'))
+BEGIN
+    DROP TABLE [dbo].[Source_CityLocation];    
+END
+
+BEGIN
+    CREATE TABLE [dbo].[Source_CityLocation] (
+        -- Primary key with IDENTITY (auto-increment by 1)
+        [ID] INT IDENTITY(1,1) NOT NULL,
+        [CityID] INT NULL,
+        [LocationID] INT NULL,
+
+        -- Audit columns with SQL Server predefined values
+        [CreatedDateTime] DATETIME2 NOT NULL DEFAULT GETDATE(),
+        [CreatedBy] VARCHAR(300) NOT NULL DEFAULT SUSER_SNAME(),
+        [ModifiedDateTime] DATETIME2 NOT NULL DEFAULT GETDATE(),
+        [ModifiedBy] VARCHAR(128) NOT NULL DEFAULT SUSER_SNAME(),
+        
+        -- PRIMARY KEY constraint defined at the end
+        CONSTRAINT PK_Source_City_Location_ID PRIMARY KEY CLUSTERED ([ID] ASC)
     );    
 END
 
@@ -228,6 +345,28 @@ BEGIN
     );    
 END
 
+-- Source_Location
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Source_Location]') AND type in (N'U'))
+BEGIN
+    DROP TABLE [dbo].[Source_Location];    
+END
+
+BEGIN
+    CREATE TABLE [dbo].[Source_Location] (
+        -- Primary key with IDENTITY (auto-increment by 1)
+        [ID] INT IDENTITY(1,1) NOT NULL,
+        [Location] VARCHAR(300) NULL,       
+
+        -- Audit columns with SQL Server predefined values
+        [CreatedDateTime] DATETIME2 NOT NULL DEFAULT GETDATE(),
+        [CreatedBy] VARCHAR(300) NOT NULL DEFAULT SUSER_SNAME(),
+        [ModifiedDateTime] DATETIME2 NOT NULL DEFAULT GETDATE(),
+        [ModifiedBy] VARCHAR(128) NOT NULL DEFAULT SUSER_SNAME(),
+        
+        -- PRIMARY KEY constraint defined at the end
+        CONSTRAINT PK_Source_Location_ID PRIMARY KEY CLUSTERED ([ID] ASC)
+    );    
+END
 
 -- 8)  dbo.LocationAddress - Wyman
 IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[LocationAddress]') AND type in (N'U'))
@@ -253,6 +392,30 @@ BEGIN
     );    
 END
 
+-- Source_LocationAddress
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Source_LocationAddress]') AND type in (N'U'))
+BEGIN
+    DROP TABLE [dbo].[Source_LocationAddress];    
+END
+
+BEGIN
+    CREATE TABLE [dbo].[Source_LocationAddress] (
+        -- Primary key with IDENTITY (auto-increment by 1)
+        [ID] INT IDENTITY(1,1) NOT NULL,
+        [locationID] INT NULL,
+        [AddressID] INT NULL,
+
+        -- Audit columns with SQL Server predefined values
+        [CreatedDateTime] DATETIME2 NOT NULL DEFAULT GETDATE(),
+        [CreatedBy] VARCHAR(300) NOT NULL DEFAULT SUSER_SNAME(),
+        [ModifiedDateTime] DATETIME2 NOT NULL DEFAULT GETDATE(),
+        [ModifiedBy] VARCHAR(128) NOT NULL DEFAULT SUSER_SNAME(),
+        
+        -- PRIMARY KEY constraint defined at the end
+        CONSTRAINT PK_Source_Location_Address_ID PRIMARY KEY CLUSTERED ([ID] ASC)
+    );    
+END
+
 -- 9)  dbo.Address - Hugo
 IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Address]') AND type in (N'U'))
 BEGIN
@@ -273,6 +436,29 @@ BEGIN
         
         -- PRIMARY KEY constraint defined at the end
         CONSTRAINT PK_Address_ID PRIMARY KEY CLUSTERED ([ID] ASC)
+    );    
+END
+
+-- Source_Address
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Source_Address]') AND type in (N'U'))
+BEGIN
+    DROP TABLE [dbo].[Source_Address];    
+END
+
+BEGIN
+    CREATE TABLE [dbo].[Source_Address] (
+        -- Primary key with IDENTITY (auto-increment by 1)
+        [ID] INT IDENTITY(1,1) NOT NULL,
+        [Address] VARCHAR(300) NULL,       
+
+        -- Audit columns with SQL Server predefined values
+        [CreatedDateTime] DATETIME2 NOT NULL DEFAULT GETDATE(),
+        [CreatedBy] VARCHAR(300) NOT NULL DEFAULT SUSER_SNAME(),
+        [ModifiedDateTime] DATETIME2 NOT NULL DEFAULT GETDATE(),
+        [ModifiedBy] VARCHAR(128) NOT NULL DEFAULT SUSER_SNAME(),
+        
+        -- PRIMARY KEY constraint defined at the end
+        CONSTRAINT PK_Source_Address_ID PRIMARY KEY CLUSTERED ([ID] ASC)
     );    
 END
 
@@ -300,6 +486,30 @@ BEGIN
     );    
 END
 
+-- Source_AddressPostalCode
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Source_AddressPostalCode]') AND type in (N'U'))
+BEGIN
+    DROP TABLE [dbo].[Source_AddressPostalCode];    
+END
+
+BEGIN
+    CREATE TABLE [dbo].[Source_AddressPostalCode] (
+        -- Primary key with IDENTITY (auto-increment by 1)
+        [ID] INT IDENTITY(1,1) NOT NULL,
+        [AddressID] INT NULL,
+        [PostalCodeID] INT NULL,
+
+        -- Audit columns with SQL Server predefined values
+        [CreatedDateTime] DATETIME2 NOT NULL DEFAULT GETDATE(),
+        [CreatedBy] VARCHAR(300) NOT NULL DEFAULT SUSER_SNAME(),
+        [ModifiedDateTime] DATETIME2 NOT NULL DEFAULT GETDATE(),
+        [ModifiedBy] VARCHAR(128) NOT NULL DEFAULT SUSER_SNAME(),
+        
+        -- PRIMARY KEY constraint defined at the end
+        CONSTRAINT PK_Source_Address_PostalCode_ID PRIMARY KEY CLUSTERED ([ID] ASC)
+    );    
+END
+
 -- 11) dbo.PostalCode - Hugo & Wyman
 IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[PostalCode]') AND type in (N'U'))
 BEGIN
@@ -320,5 +530,28 @@ BEGIN
         
         -- PRIMARY KEY constraint defined at the end
         CONSTRAINT PK_PostalCode_ID PRIMARY KEY CLUSTERED ([ID] ASC)
+    );    
+END
+
+-- Source_PostalCode
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Source_PostalCode]') AND type in (N'U'))
+BEGIN
+    DROP TABLE [dbo].[Source_PostalCode];    
+END
+
+BEGIN
+    CREATE TABLE [dbo].[Source_PostalCode] (
+        -- Primary key with IDENTITY (auto-increment by 1)
+        [ID] INT IDENTITY(1,1) NOT NULL,
+        [PostalCode] VARCHAR(300) NULL,
+
+        -- Audit columns with SQL Server predefined values
+        [CreatedDateTime] DATETIME2 NOT NULL DEFAULT GETDATE(),
+        [CreatedBy] VARCHAR(300) NOT NULL DEFAULT SUSER_SNAME(),
+        [ModifiedDateTime] DATETIME2 NOT NULL DEFAULT GETDATE(),
+        [ModifiedBy] VARCHAR(128) NOT NULL DEFAULT SUSER_SNAME(),
+        
+        -- PRIMARY KEY constraint defined at the end
+        CONSTRAINT PK_Source_PostalCode_ID PRIMARY KEY CLUSTERED ([ID] ASC)
     );    
 END
