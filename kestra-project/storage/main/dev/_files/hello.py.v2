@@ -1,0 +1,39 @@
+import datetime
+import os
+import json
+
+def main():
+    print("=" * 60)
+    print("🚀 KESTRA PYTHON SCRIPT EXECUTED")
+    print("=" * 60)
+    print(f"Current time: {datetime.datetime.now()}")
+    print(f"Script location: /app/scripts/hello.py")
+    print(f"Working directory: {os.getcwd()}")
+    print(f"Host: {os.uname().nodename if hasattr(os, 'uname') else 'Unknown'}")
+    print("=" * 60)
+    
+    # Create a test file to verify it worked
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    with open("/tmp/script_executed.txt", "w") as f:
+        f.write(f"Script executed at: {timestamp}\n")
+        f.write("✅ Kestra is working correctly!\n")
+        f.write(f"Script path: /app/scripts/hello.py\n")
+    
+    # Create a JSON output (useful for data pipelines)
+    output_data = {
+        "status": "success",
+        "timestamp": timestamp,
+        "message": "Hello from Kestra!",
+        "script": "hello.py"
+    }
+    
+    with open("output.json", "w") as f:
+        json.dump(output_data, f, indent=2)
+    
+    print("✅ Test file created at /tmp/script_executed.txt")
+    print("✅ JSON output saved to /app/storage/output.json")
+    print("=" * 60)
+    print("🎉 Script completed successfully!")
+
+if __name__ == "__main__":
+    main()

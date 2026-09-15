@@ -1,0 +1,12 @@
+﻿kestra:
+  repository:
+    type: memory
+  storage:
+    type: local
+    local:
+      base-path: /app/storage
+  queue:
+    type: memory
+  server:
+    basic-auth:
+      enabled: false

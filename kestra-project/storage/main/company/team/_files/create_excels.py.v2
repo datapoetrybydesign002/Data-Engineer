@@ -1,0 +1,31 @@
+import os
+from openpyxl import Workbook
+
+FILES = ["FileOne.xlsx", "FileTwo.xlsx", "FileThree.xlsx", "FileFour.xlsx", "FileFive.xlsx"]
+TABS = ["Tab1", "Tab2"]
+
+def main():
+    print(f"Working directory: {os.getcwd()}")
+    print(f"Creating {len(FILES)} Excel files...")
+
+    for filename in FILES:
+        wb = Workbook()
+
+        # Rename the default sheet to Tab1
+        default_sheet = wb.active
+        default_sheet.title = TABS[0]
+
+        # Add a small header so we can verify content later
+        default_sheet["A1"] = f"Hello from {filename}"
+        default_sheet["A2"] = f"Created at {os.path.basename(filename)}"
+
+        # Create Tab2
+        wb.create_sheet(title=TABS[1])
+
+        wb.save(filename)
+        print(f"✅ Created {filename} with tabs {TABS}")
+
+    print("🎉 All files created successfully!")
+
+if __name__ == "__main__":
+    main()

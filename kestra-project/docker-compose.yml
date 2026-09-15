@@ -1,0 +1,23 @@
+﻿version: '3.8'
+
+services:
+  kestra:
+    image: kestra/kestra:latest
+    container_name: kestra
+    user: "root"
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./storage:/app/storage
+      - ./logs:/app/logs
+      - ./scripts:/app/scripts
+      - ./flows:/app/flows
+      - ./config:/app/config
+      - ./excel-output:/app/excel-output
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /tmp/kestra-wd:/tmp/kestra-wd:rw
+    environment:
+      - KESTRA_CONFIGURATION_PATH=/app/config/application.yml
+      - KESTRA_TASKS_SCRIPTS_DOCKER_VOLUME_ENABLED=true
+    command: server standalone
+    restart: unless-stopped

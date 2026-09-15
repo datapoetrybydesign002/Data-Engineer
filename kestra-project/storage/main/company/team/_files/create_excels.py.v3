@@ -1,0 +1,29 @@
+import sys
+import os
+from openpyxl import Workbook
+
+FILES = ["FileOne.xlsx", "FileTwo.xlsx", "FileThree.xlsx", "FileFour.xlsx", "FileFive.xlsx"]
+TABS = ["Tab1", "Tab2"]
+
+def main():
+    # Accept destination folder as CLI arg, default to current directory
+    output_dir = sys.argv[1] if len(sys.argv) > 1 else "."
+    os.makedirs(output_dir, exist_ok=True)
+
+    print(f"Output directory: {os.path.abspath(output_dir)}")
+
+    for filename in FILES:
+        wb = Workbook()
+        default_sheet = wb.active
+        default_sheet.title = TABS[0]
+        default_sheet["A1"] = f"Hello from {filename}"
+        wb.create_sheet(title=TABS[1])
+
+        filepath = os.path.join(output_dir, filename)
+        wb.save(filepath)
+        print(f"✅ Created {filepath}")
+
+    print("🎉 All files created successfully!")
+
+if __name__ == "__main__":
+    main()

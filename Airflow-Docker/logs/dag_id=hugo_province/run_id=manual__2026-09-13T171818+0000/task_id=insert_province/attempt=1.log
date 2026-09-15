@@ -1,0 +1,12 @@
+{"timestamp":"2026-09-13T17:18:36.258588Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-09-13T17:18:36.260974Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/hugo_sqlserver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-09-13T17:18:36.419397Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-09-13T17:18:36.420847Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-09-13T17:18:36.421872Z","level":"info","event":"Current task name:insert_province","logger":"task.stdout"}
+{"timestamp":"2026-09-13T17:18:36.422852Z","level":"info","event":"Dag name:hugo_province","logger":"task.stdout"}
+{"timestamp":"2026-09-13T17:18:36.420271Z","level":"info","event":"Executing: \n            INSERT INTO dbo.Province \n                (Province, ProvinceCode, CreatedDateTime, ModifiedDateTime)\n            VALUES \n                ('Ontario', 'ON', GETDATE(), GETDATE());\n        ","logger":"airflow.task.operators.airflow.providers.common.sql.operators.sql.SQLExecuteQueryOperator","filename":"sql.py","lineno":556}
+{"timestamp":"2026-09-13T17:18:36.498715Z","level":"info","event":"Running statement: \n            INSERT INTO dbo.Province \n                (Province, ProvinceCode, CreatedDateTime, ModifiedDateTime)\n            VALUES \n                ('Ontario', 'ON', GETDATE(), GETDATE());\n        , parameters: None","logger":"airflow.task.hooks.airflow.providers.microsoft.mssql.hooks.mssql.MsSqlHook","filename":"sql.py","lineno":896}
+{"timestamp":"2026-09-13T17:18:40.280951Z","level":"info","event":"Rows affected: 1","logger":"airflow.task.hooks.airflow.providers.microsoft.mssql.hooks.mssql.MsSqlHook","filename":"sql.py","lineno":914}
+{"timestamp":"2026-09-13T17:18:40.318198Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-09-13T17:18:40.319299Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-09-13T17:18:40.320456Z","level":"info","event":"Task operator:<Task(SQLExecuteQueryOperator): insert_province>","logger":"task.stdout"}

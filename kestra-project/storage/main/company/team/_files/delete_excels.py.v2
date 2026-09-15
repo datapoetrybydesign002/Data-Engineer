@@ -1,0 +1,21 @@
+import sys
+import os
+
+FILES = ["FileOne.xlsx", "FileTwo.xlsx", "FileThree.xlsx", "FileFour.xlsx", "FileFive.xlsx"]
+
+def main():
+    output_dir = sys.argv[1] if len(sys.argv) > 1 else "."
+    print(f"Target directory: {os.path.abspath(output_dir)}")
+
+    for filename in FILES:
+        filepath = os.path.join(output_dir, filename)
+        if os.path.exists(filepath):
+            os.remove(filepath)
+            print(f"🗑️  Deleted {filepath}")
+        else:
+            print(f"⚠️  {filepath} not found")
+
+    print("🎉 Cleanup complete!")
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,15 @@
+﻿id: hello_world
+namespace: dev
+description: My first Kestra flow
+
+tasks:
+  - id: run_python_script
+    type: io.kestra.plugin.scripts.shell.Script
+    commands:
+      - python3 /app/scripts/hello.py
+    beforeCommands:
+      - echo "Starting Python script execution..."
+
+  - id: log_completion
+    type: io.kestra.plugin.core.log.Log
+    message: "🎉 Python script completed successfully!"

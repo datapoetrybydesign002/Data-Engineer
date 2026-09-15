@@ -1,19 +1,14 @@
 <?xml version="1.0"?>
-<BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>EarlyON_SSIS</Name>
-    <LastWriteTime>2026-08-11T03:31:50.1031098Z</LastWriteTime>
+    <LastWriteTime>2026-09-15T01:25:11.0776899Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
-      <Name>Test_Package.dtsx</Name>
-      <LastWriteTime>2026-08-11T01:47:42.119984Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>Test_Package_Two.dtsx</Name>
-      <LastWriteTime>2026-08-11T03:31:50.0790449Z</LastWriteTime>
+      <Name>Province.dtsx</Name>
+      <LastWriteTime>2026-09-15T01:25:11.0496835Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
