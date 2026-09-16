@@ -12,3 +12,4 @@ Prince Edward Island,PE
 Quebec,QC
 Saskatchewan,SK
 Yukon,YT
+Wyman, WN

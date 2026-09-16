@@ -29,6 +29,12 @@ Tables:
 -- 11)  dbo.PostalCode - Hugo & Wyman
         dbo.Source_PostalCode
 ************************************************************************************/
+USE EarlyON_v2
+
+/***************************************************************************************
+PROVINCE
+***************************************************************************************/
+
 
 -- 1) dbo.Province - Hugo
 
@@ -80,6 +86,45 @@ BEGIN
     );    
 END
 
+
+TRUNCATE TABLE [EarlyON_v2].[dbo].[Source_Province]
+
+SELECT * FROM [EarlyON_v2].[dbo].[Source_Province]
+SELECT * FROM [EarlyON_v2].[dbo].[Province]
+
+
+-- MERGE
+
+MERGE [dbo].[Province] AS TARGET
+USING [dbo].[Source_Province] AS SOURCE
+    ON TARGET.[ID] = SOURCE.[ID] 
+WHEN MATCHED 
+    THEN UPDATE SET
+        TARGET.[Province]       = SOURCE.[Province],
+        TARGET.[ProvinceCode]   = SOURCE.[ProvinceCode],
+        TARGET.[ModifiedDateTime] = GETDATE(),
+        TARGET.[ModifiedBy]       = SUSER_SNAME()
+WHEN NOT MATCHED BY TARGET
+    THEN INSERT (
+        [Province],
+        [ProvinceCode],
+        [CreatedDateTime],
+        [CreatedBy],
+        [ModifiedDateTime],
+        [ModifiedBy]
+    )
+    VALUES (
+        SOURCE.[Province],
+        SOURCE.[ProvinceCode],
+        GETDATE(),
+        SUSER_SNAME(),
+        GETDATE(),
+        SUSER_SNAME()
+    );
+
+/***************************************************************************************
+SERVICE MANAGER
+***************************************************************************************/
 
 -- 2)  dbo.ServiceManager - Wyman
 
