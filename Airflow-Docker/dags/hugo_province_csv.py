@@ -11,7 +11,7 @@ import pandas as pd
 
 default_args = {
     'owner': 'hugo',
-    'retries': 1,
+    'retries': 1
 }
 
 with DAG(
@@ -53,4 +53,4 @@ with DAG(
         print(f"Successfully inserted {len(df)} rows into dbo.Province")
 
     # Dependencies
-    truncate_table >> load_province_csv()
+    
