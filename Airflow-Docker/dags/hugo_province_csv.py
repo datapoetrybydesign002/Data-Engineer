@@ -43,14 +43,24 @@ with DAG(
         hook = MsSqlHook(mssql_conn_id='SQL_Server_EarlyON')
         engine = hook.get_sqlalchemy_engine()
 
-        df.to_sql(
-            name='Province',
-            schema='dbo',
-            con=engine,
-            if_exists='append',
-            index=False,
-        )
+        # Fix: use engine.begin() to obtain a Connection object, not the Engine itself
+        with engine.begin() as conn:
+            df.to_sql(
+                name='Province',
+                schema='dbo',
+                con=conn,
+                if_exists='append',
+                index=False,
+            )
         print(f"Successfully inserted {len(df)} rows into dbo.Province")
 
-    # Dependencies
-    
+    # STEP 3: Load target
+    load_target_table = SQLExecuteQueryOperator(
+        task_id='load_target_province',
+        conn_id='SQL_Server_EarlyON',
+        sql="EXECUTE dbo.LoadTarget_Province;",
+        autocommit=True,
+    )
+
+    # Fix: use the correct task variable name truncate_table
+    truncate_table >> load_province_csv() >> load_target_table

@@ -1,0 +1,16 @@
+{"timestamp":"2026-10-20T03:10:49.498401Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-10-20T03:10:49.503188Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/hugo.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-10-20T03:10:49.559452Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/hugo.py","lineno":9,"logger":"py.warnings"}
+{"timestamp":"2026-10-20T03:10:49.619263Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-10-20T03:10:49.622710Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-10-20T03:10:49.624821Z","level":"info","event":"Current task name:step_two","logger":"task.stdout"}
+{"timestamp":"2026-10-20T03:10:49.627491Z","level":"info","event":"Dag name:hugo","logger":"task.stdout"}
+{"timestamp":"2026-10-20T03:10:49.631171Z","level":"info","event":"============================================================","logger":"unusual_prefix_bc879f23ba52a6d042b8dc8a0177d1304f84f156_hugo","filename":"hugo.py","lineno":47}
+{"timestamp":"2026-10-20T03:10:49.631521Z","level":"info","event":"✅ STEP TWO: Hugo's DAG is working perfectly!","logger":"unusual_prefix_bc879f23ba52a6d042b8dc8a0177d1304f84f156_hugo","filename":"hugo.py","lineno":48}
+{"timestamp":"2026-10-20T03:10:49.631714Z","level":"info","event":"🕐 Current time: 2026-10-20 03:10:49.631635","logger":"unusual_prefix_bc879f23ba52a6d042b8dc8a0177d1304f84f156_hugo","filename":"hugo.py","lineno":49}
+{"timestamp":"2026-10-20T03:10:49.631878Z","level":"info","event":"============================================================","logger":"unusual_prefix_bc879f23ba52a6d042b8dc8a0177d1304f84f156_hugo","filename":"hugo.py","lineno":50}
+{"timestamp":"2026-10-20T03:10:49.636098Z","level":"info","event":"Step Two completed successfully!","logger":"task.stdout"}
+{"timestamp":"2026-10-20T03:10:49.632955Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":215}
+{"timestamp":"2026-10-20T03:10:49.676385Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-10-20T03:10:49.684933Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-10-20T03:10:49.686230Z","level":"info","event":"Task operator:<Task(PythonOperator): step_two>","logger":"task.stdout"}
