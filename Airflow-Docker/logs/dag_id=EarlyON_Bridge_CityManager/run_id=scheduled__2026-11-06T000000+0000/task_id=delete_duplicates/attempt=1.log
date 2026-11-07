@@ -1,0 +1,13 @@
+{"timestamp":"2026-11-06T03:37:53.640042Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-11-06T03:37:53.649293Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/EarlyON_Bridge_CityManager.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-11-06T03:37:54.752901Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/EarlyON_Bridge_CityManager.py","lineno":4,"logger":"py.warnings"}
+{"timestamp":"2026-11-06T03:37:54.832371Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-11-06T03:37:54.834631Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-11-06T03:37:54.866155Z","level":"info","event":"Current task name:delete_duplicates","logger":"task.stdout"}
+{"timestamp":"2026-11-06T03:37:54.867396Z","level":"info","event":"Dag name:EarlyON_Bridge_CityManager","logger":"task.stdout"}
+{"timestamp":"2026-11-06T03:37:54.834591Z","level":"info","event":"Executing: EXECUTE dbo.delete_duplicates_source_citymanager_servicemanager","logger":"airflow.task.operators.airflow.providers.common.sql.operators.sql.SQLExecuteQueryOperator","filename":"sql.py","lineno":556}
+{"timestamp":"2026-11-06T03:37:55.098256Z","level":"info","event":"Running statement: EXECUTE dbo.delete_duplicates_source_citymanager_servicemanager, parameters: None","logger":"airflow.task.hooks.airflow.providers.microsoft.mssql.hooks.mssql.MsSqlHook","filename":"sql.py","lineno":896}
+{"timestamp":"2026-11-06T03:38:06.790670Z","level":"info","event":"Rows affected: 0","logger":"airflow.task.hooks.airflow.providers.microsoft.mssql.hooks.mssql.MsSqlHook","filename":"sql.py","lineno":914}
+{"timestamp":"2026-11-06T03:38:06.869959Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-11-06T03:38:06.896394Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-11-06T03:38:06.904134Z","level":"info","event":"Task operator:<Task(SQLExecuteQueryOperator): delete_duplicates>","logger":"task.stdout"}

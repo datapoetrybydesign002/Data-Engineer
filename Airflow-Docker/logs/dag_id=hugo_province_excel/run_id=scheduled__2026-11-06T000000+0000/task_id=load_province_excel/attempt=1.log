@@ -1,0 +1,27 @@
+{"timestamp":"2026-11-06T03:36:20.138822Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-11-06T03:36:20.164057Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/hugo_province_excel.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-11-06T03:36:20.692914Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/hugo_province_excel.py","lineno":8,"logger":"py.warnings"}
+{"timestamp":"2026-11-06T03:36:20.799385Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-11-06T03:36:20.812873Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-11-06T03:36:20.814837Z","level":"info","event":"Current task name:load_province_excel","logger":"task.stdout"}
+{"timestamp":"2026-11-06T03:36:20.830522Z","level":"info","event":"Dag name:hugo_province_excel","logger":"task.stdout"}
+{"timestamp":"2026-11-06T03:36:22.235379Z","level":"info","event":"Read 13 rows from /opt/airflow/data/excel/Province.xlsx","logger":"task.stdout"}
+{"timestamp":"2026-11-06T03:36:22.269073Z","level":"info","event":"                 Province ProvinceCode","logger":"task.stdout"}
+{"timestamp":"2026-11-06T03:36:22.270541Z","level":"info","event":"                  Alberta           AB","logger":"task.stdout"}
+{"timestamp":"2026-11-06T03:36:22.278732Z","level":"info","event":"         British Columbia           BC","logger":"task.stdout"}
+{"timestamp":"2026-11-06T03:36:22.280129Z","level":"info","event":"                 Manitoba           MB","logger":"task.stdout"}
+{"timestamp":"2026-11-06T03:36:22.282008Z","level":"info","event":"            New Brunswick           NB","logger":"task.stdout"}
+{"timestamp":"2026-11-06T03:36:22.283217Z","level":"info","event":"Newfoundland and Labrador           NL","logger":"task.stdout"}
+{"timestamp":"2026-11-06T03:36:22.284302Z","level":"info","event":"    Northwest Territories           NT","logger":"task.stdout"}
+{"timestamp":"2026-11-06T03:36:22.286413Z","level":"info","event":"              Nova Scotia           NS","logger":"task.stdout"}
+{"timestamp":"2026-11-06T03:36:22.292027Z","level":"info","event":"                  Nunavut           NU","logger":"task.stdout"}
+{"timestamp":"2026-11-06T03:36:22.295954Z","level":"info","event":"                  Ontario           ON","logger":"task.stdout"}
+{"timestamp":"2026-11-06T03:36:22.298115Z","level":"info","event":"     Prince Edward Island           PE","logger":"task.stdout"}
+{"timestamp":"2026-11-06T03:36:22.299557Z","level":"info","event":"                   Quebec           QC","logger":"task.stdout"}
+{"timestamp":"2026-11-06T03:36:22.302403Z","level":"info","event":"             Saskatchewan           SK","logger":"task.stdout"}
+{"timestamp":"2026-11-06T03:36:22.303358Z","level":"info","event":"                    Yukon           YT","logger":"task.stdout"}
+{"timestamp":"2026-11-06T03:36:23.341083Z","level":"info","event":"Successfully inserted 13 rows into dbo.Province","logger":"task.stdout"}
+{"timestamp":"2026-11-06T03:36:23.353687Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":215}
+{"timestamp":"2026-11-06T03:36:23.604209Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-11-06T03:36:23.611849Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-11-06T03:36:23.627329Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): load_province_excel>","logger":"task.stdout"}
