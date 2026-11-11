@@ -1,0 +1,13 @@
+{"timestamp":"2026-11-07T20:07:03.470339Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-11-07T20:07:03.472899Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/EarlyON_Bridge_CityLocation.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-11-07T20:07:03.797244Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/EarlyON_Bridge_CityLocation.py","lineno":4,"logger":"py.warnings"}
+{"timestamp":"2026-11-07T20:07:03.856058Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-11-07T20:07:03.858095Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-11-07T20:07:03.863241Z","level":"info","event":"Current task name:delete_nulls1","logger":"task.stdout"}
+{"timestamp":"2026-11-07T20:07:03.864247Z","level":"info","event":"Dag name:EarlyON_Bridge_CityLocation","logger":"task.stdout"}
+{"timestamp":"2026-11-07T20:07:03.858332Z","level":"info","event":"Executing: DELETE dbo.Source_CityLocation WHERE CityID IS NULL","logger":"airflow.task.operators.airflow.providers.common.sql.operators.sql.SQLExecuteQueryOperator","filename":"sql.py","lineno":556}
+{"timestamp":"2026-11-07T20:07:03.921264Z","level":"info","event":"Running statement: DELETE dbo.Source_CityLocation WHERE CityID IS NULL, parameters: None","logger":"airflow.task.hooks.airflow.providers.microsoft.mssql.hooks.mssql.MsSqlHook","filename":"sql.py","lineno":896}
+{"timestamp":"2026-11-07T20:07:08.162201Z","level":"info","event":"Rows affected: 0","logger":"airflow.task.hooks.airflow.providers.microsoft.mssql.hooks.mssql.MsSqlHook","filename":"sql.py","lineno":914}
+{"timestamp":"2026-11-07T20:07:08.194139Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-11-07T20:07:08.195603Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-11-07T20:07:08.196708Z","level":"info","event":"Task operator:<Task(SQLExecuteQueryOperator): delete_nulls1>","logger":"task.stdout"}
