@@ -1,0 +1,11 @@
+{"timestamp":"2026-11-12T02:02:09.246211Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-11-12T02:02:09.248781Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/EarlyON_DimAddress.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-11-12T02:02:09.597031Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/EarlyON_DimAddress.py","lineno":4,"logger":"py.warnings"}
+{"timestamp":"2026-11-12T02:02:09.636623Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-11-12T02:02:09.637734Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-11-12T02:02:09.638686Z","level":"info","event":"Current task name:load_source_table","logger":"task.stdout"}
+{"timestamp":"2026-11-12T02:02:09.639887Z","level":"info","event":"Dag name:EarlyON_DimAddress","logger":"task.stdout"}
+{"timestamp":"2026-11-12T02:02:12.628669Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":215}
+{"timestamp":"2026-11-12T02:02:12.663851Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-11-12T02:02:12.672273Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-11-12T02:02:12.673432Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): load_source_table>","logger":"task.stdout"}

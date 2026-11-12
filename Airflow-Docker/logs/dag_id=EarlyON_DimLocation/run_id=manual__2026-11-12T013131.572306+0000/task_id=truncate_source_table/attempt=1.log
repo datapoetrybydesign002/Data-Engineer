@@ -1,0 +1,12 @@
+{"timestamp":"2026-11-12T01:31:33.342132Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-11-12T01:31:33.343852Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/EarlyON_DimLocation.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-11-12T01:31:33.763217Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/EarlyON_DimLocation.py","lineno":4,"logger":"py.warnings"}
+{"timestamp":"2026-11-12T01:31:33.818478Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-11-12T01:31:33.819533Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-11-12T01:31:33.820511Z","level":"info","event":"Current task name:truncate_source_table","logger":"task.stdout"}
+{"timestamp":"2026-11-12T01:31:33.821322Z","level":"info","event":"Dag name:EarlyON_DimLocation","logger":"task.stdout"}
+{"timestamp":"2026-11-12T01:31:33.820084Z","level":"info","event":"Executing: TRUNCATE TABLE dbo.Source_Location;","logger":"airflow.task.operators.airflow.providers.common.sql.operators.sql.SQLExecuteQueryOperator","filename":"sql.py","lineno":556}
+{"timestamp":"2026-11-12T01:31:33.893765Z","level":"info","event":"Running statement: TRUNCATE TABLE dbo.Source_Location;, parameters: None","logger":"airflow.task.hooks.airflow.providers.microsoft.mssql.hooks.mssql.MsSqlHook","filename":"sql.py","lineno":896}
+{"timestamp":"2026-11-12T01:31:37.205989Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-11-12T01:31:37.207146Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-11-12T01:31:37.208236Z","level":"info","event":"Task operator:<Task(SQLExecuteQueryOperator): truncate_source_table>","logger":"task.stdout"}

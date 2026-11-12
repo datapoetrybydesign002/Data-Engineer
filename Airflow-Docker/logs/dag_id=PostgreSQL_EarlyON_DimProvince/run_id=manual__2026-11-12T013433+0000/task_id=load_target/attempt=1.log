@@ -1,0 +1,12 @@
+{"timestamp":"2026-11-12T01:34:44.997361Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-11-12T01:34:44.999191Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/PostgreSQL_EarlyON_DimProvince.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-11-12T01:34:45.085363Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/PostgreSQL_EarlyON_DimProvince.py","lineno":9,"logger":"py.warnings"}
+{"timestamp":"2026-11-12T01:34:45.115854Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-11-12T01:34:45.119469Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-11-12T01:34:45.121022Z","level":"info","event":"Current task name:load_target","logger":"task.stdout"}
+{"timestamp":"2026-11-12T01:34:45.122345Z","level":"info","event":"Dag name:PostgreSQL_EarlyON_DimProvince","logger":"task.stdout"}
+{"timestamp":"2026-11-12T01:34:45.116978Z","level":"info","event":"Executing: CALL public.load_target_table_Province();","logger":"airflow.task.operators.airflow.providers.common.sql.operators.sql.SQLExecuteQueryOperator","filename":"sql.py","lineno":556}
+{"timestamp":"2026-11-12T01:34:45.206866Z","level":"info","event":"Running statement: CALL public.load_target_table_Province();, parameters: None","logger":"airflow.task.hooks.airflow.providers.postgres.hooks.postgres.PostgresHook","filename":"sql.py","lineno":896}
+{"timestamp":"2026-11-12T01:34:49.132940Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-11-12T01:34:49.135128Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-11-12T01:34:49.136353Z","level":"info","event":"Task operator:<Task(SQLExecuteQueryOperator): load_target>","logger":"task.stdout"}

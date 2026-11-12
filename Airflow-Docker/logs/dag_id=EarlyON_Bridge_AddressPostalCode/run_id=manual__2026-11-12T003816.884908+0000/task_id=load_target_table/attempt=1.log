@@ -1,0 +1,13 @@
+{"timestamp":"2026-11-12T00:39:08.749414Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-11-12T00:39:08.761087Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/EarlyON_Bridge_AddressPostalCode.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-11-12T00:39:09.354425Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/EarlyON_Bridge_AddressPostalCode.py","lineno":4,"logger":"py.warnings"}
+{"timestamp":"2026-11-12T00:39:09.443618Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-11-12T00:39:09.445521Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-11-12T00:39:09.451760Z","level":"info","event":"Current task name:load_target_table","logger":"task.stdout"}
+{"timestamp":"2026-11-12T00:39:09.453394Z","level":"info","event":"Dag name:EarlyON_Bridge_AddressPostalCode","logger":"task.stdout"}
+{"timestamp":"2026-11-12T00:39:09.445735Z","level":"info","event":"Executing: EXECUTE dbo.load_target_addresspostalcode","logger":"airflow.task.operators.airflow.providers.common.sql.operators.sql.SQLExecuteQueryOperator","filename":"sql.py","lineno":556}
+{"timestamp":"2026-11-12T00:39:09.565410Z","level":"info","event":"Running statement: EXECUTE dbo.load_target_addresspostalcode, parameters: None","logger":"airflow.task.hooks.airflow.providers.microsoft.mssql.hooks.mssql.MsSqlHook","filename":"sql.py","lineno":896}
+{"timestamp":"2026-11-12T00:39:16.027266Z","level":"info","event":"Rows affected: 0","logger":"airflow.task.hooks.airflow.providers.microsoft.mssql.hooks.mssql.MsSqlHook","filename":"sql.py","lineno":914}
+{"timestamp":"2026-11-12T00:39:16.083557Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-11-12T00:39:16.084816Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-11-12T00:39:16.088963Z","level":"info","event":"Task operator:<Task(SQLExecuteQueryOperator): load_target_table>","logger":"task.stdout"}

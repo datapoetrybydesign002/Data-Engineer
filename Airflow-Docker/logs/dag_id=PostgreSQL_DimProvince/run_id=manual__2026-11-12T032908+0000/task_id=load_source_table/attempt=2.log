@@ -1,0 +1,15 @@
+{"timestamp":"2026-11-12T03:31:25.450165Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-11-12T03:31:25.467874Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/PostgreSQL_EarlyON_DimProvince.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-11-12T03:31:25.717675Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/PostgreSQL_EarlyON_DimProvince.py","lineno":9,"logger":"py.warnings"}
+{"timestamp":"2026-11-12T03:31:25.822680Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-11-12T03:31:25.825397Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-11-12T03:31:25.828237Z","level":"info","event":"Current task name:load_source_table","logger":"task.stdout"}
+{"timestamp":"2026-11-12T03:31:25.829629Z","level":"info","event":"Dag name:PostgreSQL_DimProvince","logger":"task.stdout"}
+{"timestamp":"2026-11-12T03:31:25.857777Z","level":"info","event":"Read 13 rows from /opt/airflow/data/csv/Province.csv","logger":"task.stdout"}
+{"timestamp":"2026-11-12T03:31:25.861180Z","level":"info","event":"Dataframe columns to be inserted: ['province', 'provincecode']","logger":"task.stdout"}
+{"timestamp":"2026-11-12T03:31:25.891753Z","level":"info","event":"Executing bulk insert of 13 rows...","logger":"task.stdout"}
+{"timestamp":"2026-11-12T03:31:26.254550Z","level":"info","event":"Successfully inserted 13 rows into public.source_province","logger":"task.stdout"}
+{"timestamp":"2026-11-12T03:31:26.255929Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":215}
+{"timestamp":"2026-11-12T03:31:26.344805Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-11-12T03:31:26.351909Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-11-12T03:31:26.354450Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): load_source_table>","logger":"task.stdout"}

@@ -12,7 +12,7 @@
 -- -------------------------------------------------------------------------------------
 -- PROVINCE
 -- -------------------------------------------------------------------------------------
-DROP TABLE IF EXISTS public.Source_Province CASCADE;
+DROP TABLE IF EXISTS public."source_province" CASCADE;
 CREATE TABLE public.Source_Province (
     ID SERIAL PRIMARY KEY,
     Province VARCHAR(300),
@@ -21,13 +21,21 @@ CREATE TABLE public.Source_Province (
     CreatedDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-DROP TABLE IF EXISTS public.Province CASCADE;
-CREATE TABLE public.Province (
+INSERT INTO public.source_province (province) VALUES('TEST'), ('test')
+INSERT INTO public.source_province (province) VALUES('test')
+
+TRUNCATE TABLE public.source_province RESTART IDENTITY;
+TRUNCATE TABLE public.province RESTART IDENTITY;
+select * from public.source_province
+select * from public.province
+
+DROP TABLE IF EXISTS public.province CASCADE;
+CREATE TABLE public.province (
     ID SERIAL PRIMARY KEY,
-    Province VARCHAR(300),
-    ProvinceCode VARCHAR(300),
-    CreatedBy VARCHAR(300) DEFAULT CURRENT_USER,
-    CreatedDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    province VARCHAR(300),
+    provinceCode VARCHAR(300),
+    createdBy VARCHAR(300) DEFAULT CURRENT_USER,
+    createdDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 -- Procedure: Load Province
@@ -43,6 +51,10 @@ BEGIN
 END;
 $$;
 
+SELECT * From public.source_province
+SELECT * FROM public.province
+
+insert into public.Province (Province) values ('test')
 
 -- -------------------------------------------------------------------------------------
 -- SERVICE MANAGER

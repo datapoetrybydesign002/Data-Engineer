@@ -1,0 +1,11 @@
+{"timestamp":"2026-11-12T00:27:25.505046Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-11-12T00:27:25.605993Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/hugo_sqlserver.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-11-12T00:27:26.248006Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-11-12T00:27:26.263781Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-11-12T00:27:26.265724Z","level":"info","event":"Current task name:truncate_province","logger":"task.stdout"}
+{"timestamp":"2026-11-12T00:27:26.277757Z","level":"info","event":"Dag name:hugo_province","logger":"task.stdout"}
+{"timestamp":"2026-11-12T00:27:26.245103Z","level":"info","event":"Executing: TRUNCATE TABLE dbo.Province;","logger":"airflow.task.operators.airflow.providers.common.sql.operators.sql.SQLExecuteQueryOperator","filename":"sql.py","lineno":556}
+{"timestamp":"2026-11-12T00:27:27.382731Z","level":"info","event":"Running statement: TRUNCATE TABLE dbo.Province;, parameters: None","logger":"airflow.task.hooks.airflow.providers.microsoft.mssql.hooks.mssql.MsSqlHook","filename":"sql.py","lineno":896}
+{"timestamp":"2026-11-12T00:28:42.821558Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-11-12T00:28:43.432975Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-11-12T00:28:43.435943Z","level":"info","event":"Task operator:<Task(SQLExecuteQueryOperator): truncate_province>","logger":"task.stdout"}
