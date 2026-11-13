@@ -6,3 +6,7 @@
 {"timestamp":"2026-11-13T01:42:03.863689Z","level":"info","event":"Current task name:truncate_source_table","logger":"task.stdout"}
 {"timestamp":"2026-11-13T01:42:03.864730Z","level":"info","event":"Dag name:EarlyON_DimAddress","logger":"task.stdout"}
 {"timestamp":"2026-11-13T01:42:03.863651Z","level":"info","event":"Executing: TRUNCATE TABLE dbo.Source_Address;","logger":"airflow.task.operators.airflow.providers.common.sql.operators.sql.SQLExecuteQueryOperator","filename":"sql.py","lineno":556}
+{"timestamp":"2026-11-13T01:42:03.932112Z","level":"info","event":"Running statement: TRUNCATE TABLE dbo.Source_Address;, parameters: None","logger":"airflow.task.hooks.airflow.providers.microsoft.mssql.hooks.mssql.MsSqlHook","filename":"sql.py","lineno":896}
+{"timestamp":"2026-11-13T01:42:08.774914Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-11-13T01:42:08.777620Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-11-13T01:42:08.779038Z","level":"info","event":"Task operator:<Task(SQLExecuteQueryOperator): truncate_source_table>","logger":"task.stdout"}

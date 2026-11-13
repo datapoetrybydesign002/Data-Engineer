@@ -8,3 +8,8 @@
 {"timestamp":"2026-11-13T01:42:02.171565Z","level":"info","event":"Dag name:EarlyON_Master_Waterfall","logger":"task.stdout"}
 {"timestamp":"2026-11-13T01:42:02.169017Z","level":"info","event":"Triggering Dag Run.","trigger_dag_id":"EarlyON_DimAddress","logger":"task","filename":"task_runner.py","lineno":1060}
 {"timestamp":"2026-11-13T01:42:02.221460Z","level":"info","event":"Dag Run triggered successfully.","trigger_dag_id":"EarlyON_DimAddress","logger":"task","filename":"task_runner.py","lineno":1094}
+{"timestamp":"2026-11-13T01:42:02.244844Z","level":"info","event":"Waiting for dag run to complete execution in allowed state.","dag_id":"EarlyON_DimAddress","run_id":"manual__2026-11-13T01:42:02.168679+00:00","allowed_state":["success"],"logger":"task","filename":"task_runner.py","lineno":1117}
+{"timestamp":"2026-11-13T01:42:30.093054Z","level":"info","event":"DagRun finished with allowed state.","dag_id":"EarlyON_DimAddress","state":"success","logger":"task","filename":"task_runner.py","lineno":1142}
+{"timestamp":"2026-11-13T01:42:30.174474Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-11-13T01:42:30.175712Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-11-13T01:42:30.177045Z","level":"info","event":"Task operator:<Task(TriggerDagRunOperator): trigger_EarlyON_DimAddress>","logger":"task.stdout"}

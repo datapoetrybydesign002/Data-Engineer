@@ -415,6 +415,9 @@ BEGIN
 END;
 $$;
 
+DELETE FROM public.source_citylocation WHERE city IS NULL
+DELETE FROM public.source_citylocation WHERE location IS NULL
+
 CREATE OR REPLACE PROCEDURE public.load_target_citylocation()
 LANGUAGE plpgsql AS $$
 BEGIN
@@ -487,6 +490,9 @@ BEGIN
 END;
 $$;
 
+DELETE FROM public.source_locationaddress WHERE locationid IS NULL;
+DELETE FROM public.source_locationaddress WHERE addressid IS NULL;
+
 CREATE OR REPLACE PROCEDURE public.load_target_locationaddress()
 LANGUAGE plpgsql AS $$
 BEGIN
@@ -556,6 +562,9 @@ BEGIN
     WHERE b.postalcode = a.postalcode AND a.postalcode IS NOT NULL;
 END;
 $$;
+
+DELETE FROM public.source_addresspostalcode WHERE addressid IS NULL;
+DELETE FROM public.source_addresspostalcode WHERE postalcodeid IS NULL;
 
 CREATE OR REPLACE PROCEDURE public.load_target_addresspostalcode()
 LANGUAGE plpgsql AS $$

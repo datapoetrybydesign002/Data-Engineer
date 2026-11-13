@@ -57,7 +57,7 @@ with DAG(
         # Fix: use engine.begin() to obtain a Connection object, not the Engine itself
         with engine.begin() as conn:
             df.to_sql(
-                name='Source_Location',
+                name='source_socation',
                 schema='public',
                 con=conn,
                 if_exists='append',
