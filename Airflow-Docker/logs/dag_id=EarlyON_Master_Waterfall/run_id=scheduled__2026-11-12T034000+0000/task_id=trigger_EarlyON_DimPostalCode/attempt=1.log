@@ -1,0 +1,15 @@
+{"timestamp":"2026-11-12T03:42:33.595175Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-11-12T03:42:33.597418Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/EarlyON_ETL_Master_Waterfall.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-11-12T03:42:33.646983Z","level":"warning","event":"The `airflow.operators.trigger_dagrun.TriggerDagRunOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.trigger_dagrun.TriggerDagRunOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/EarlyON_ETL_Master_Waterfall.py","lineno":3,"logger":"py.warnings"}
+{"timestamp":"2026-11-12T03:42:33.647498Z","level":"warning","event":"The `airflow.operators.empty.EmptyOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.empty.EmptyOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/EarlyON_ETL_Master_Waterfall.py","lineno":4,"logger":"py.warnings"}
+{"timestamp":"2026-11-12T03:42:33.693278Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-11-12T03:42:33.695939Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-11-12T03:42:33.697866Z","level":"info","event":"Current task name:trigger_EarlyON_DimPostalCode","logger":"task.stdout"}
+{"timestamp":"2026-11-12T03:42:33.698975Z","level":"info","event":"Dag name:EarlyON_Master_Waterfall","logger":"task.stdout"}
+{"timestamp":"2026-11-12T03:42:33.694643Z","level":"info","event":"Triggering Dag Run.","trigger_dag_id":"EarlyON_DimPostalCode","logger":"task","filename":"task_runner.py","lineno":1060}
+{"timestamp":"2026-11-12T03:42:33.752081Z","level":"info","event":"Dag Run triggered successfully.","trigger_dag_id":"EarlyON_DimPostalCode","logger":"task","filename":"task_runner.py","lineno":1094}
+{"timestamp":"2026-11-12T03:42:33.787208Z","level":"info","event":"Waiting for dag run to complete execution in allowed state.","dag_id":"EarlyON_DimPostalCode","run_id":"manual__2026-11-12T03:42:33.694242+00:00","allowed_state":["success"],"logger":"task","filename":"task_runner.py","lineno":1117}
+{"timestamp":"2026-11-12T03:43:02.089636Z","level":"info","event":"DagRun finished with allowed state.","dag_id":"EarlyON_DimPostalCode","state":"success","logger":"task","filename":"task_runner.py","lineno":1142}
+{"timestamp":"2026-11-12T03:43:02.206301Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-11-12T03:43:02.219001Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-11-12T03:43:02.224447Z","level":"info","event":"Task operator:<Task(TriggerDagRunOperator): trigger_EarlyON_DimPostalCode>","logger":"task.stdout"}

@@ -1,0 +1,11 @@
+{"timestamp":"2026-11-13T01:26:11.026941Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-11-13T01:26:11.033031Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/PostgreSQL_EarlyON_Bridge_CityManager.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-11-13T01:26:11.292094Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/PostgreSQL_EarlyON_Bridge_CityManager.py","lineno":4,"logger":"py.warnings"}
+{"timestamp":"2026-11-13T01:26:11.468947Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-11-13T01:26:11.483159Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-11-13T01:26:11.498813Z","level":"info","event":"Current task name:load_source_table","logger":"task.stdout"}
+{"timestamp":"2026-11-13T01:26:11.507258Z","level":"info","event":"Dag name:PostgreSQL_EarlyON_Bridge_CityManager","logger":"task.stdout"}
+{"timestamp":"2026-11-13T01:26:15.456922Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":215}
+{"timestamp":"2026-11-13T01:26:15.594754Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-11-13T01:26:15.618142Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-11-13T01:26:15.620200Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): load_source_table>","logger":"task.stdout"}

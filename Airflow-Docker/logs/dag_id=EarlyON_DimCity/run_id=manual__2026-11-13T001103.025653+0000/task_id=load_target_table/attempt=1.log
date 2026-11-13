@@ -1,0 +1,13 @@
+{"timestamp":"2026-11-13T00:11:13.641442Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-11-13T00:11:13.643506Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/EarlyON_DimCity.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-11-13T00:11:14.063289Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/EarlyON_DimCity.py","lineno":4,"logger":"py.warnings"}
+{"timestamp":"2026-11-13T00:11:14.117482Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-11-13T00:11:14.123892Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-11-13T00:11:14.125256Z","level":"info","event":"Current task name:load_target_table","logger":"task.stdout"}
+{"timestamp":"2026-11-13T00:11:14.126447Z","level":"info","event":"Dag name:EarlyON_DimCity","logger":"task.stdout"}
+{"timestamp":"2026-11-13T00:11:14.119669Z","level":"info","event":"Executing: EXECUTE dbo.load_target_table_city;","logger":"airflow.task.operators.airflow.providers.common.sql.operators.sql.SQLExecuteQueryOperator","filename":"sql.py","lineno":556}
+{"timestamp":"2026-11-13T00:11:14.227338Z","level":"info","event":"Running statement: EXECUTE dbo.load_target_table_city;, parameters: None","logger":"airflow.task.hooks.airflow.providers.microsoft.mssql.hooks.mssql.MsSqlHook","filename":"sql.py","lineno":896}
+{"timestamp":"2026-11-13T00:11:19.524935Z","level":"info","event":"Rows affected: 0","logger":"airflow.task.hooks.airflow.providers.microsoft.mssql.hooks.mssql.MsSqlHook","filename":"sql.py","lineno":914}
+{"timestamp":"2026-11-13T00:11:19.573687Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-11-13T00:11:19.574864Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-11-13T00:11:19.576317Z","level":"info","event":"Task operator:<Task(SQLExecuteQueryOperator): load_target_table>","logger":"task.stdout"}

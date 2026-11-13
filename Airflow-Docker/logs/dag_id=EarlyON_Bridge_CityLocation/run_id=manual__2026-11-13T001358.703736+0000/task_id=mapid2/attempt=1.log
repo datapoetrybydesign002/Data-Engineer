@@ -1,0 +1,13 @@
+{"timestamp":"2026-11-13T00:14:25.429957Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-11-13T00:14:25.431716Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/EarlyON_Bridge_CityLocation.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-11-13T00:14:25.741455Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/EarlyON_Bridge_CityLocation.py","lineno":4,"logger":"py.warnings"}
+{"timestamp":"2026-11-13T00:14:25.797700Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-11-13T00:14:25.806660Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-11-13T00:14:25.808463Z","level":"info","event":"Current task name:mapid2","logger":"task.stdout"}
+{"timestamp":"2026-11-13T00:14:25.809634Z","level":"info","event":"Dag name:EarlyON_Bridge_CityLocation","logger":"task.stdout"}
+{"timestamp":"2026-11-13T00:14:25.799880Z","level":"info","event":"Executing: EXECUTE dbo.mapid_source_cityLocation_city","logger":"airflow.task.operators.airflow.providers.common.sql.operators.sql.SQLExecuteQueryOperator","filename":"sql.py","lineno":556}
+{"timestamp":"2026-11-13T00:14:25.876936Z","level":"info","event":"Running statement: EXECUTE dbo.mapid_source_cityLocation_city, parameters: None","logger":"airflow.task.hooks.airflow.providers.microsoft.mssql.hooks.mssql.MsSqlHook","filename":"sql.py","lineno":896}
+{"timestamp":"2026-11-13T00:14:30.609950Z","level":"info","event":"Rows affected: 1273","logger":"airflow.task.hooks.airflow.providers.microsoft.mssql.hooks.mssql.MsSqlHook","filename":"sql.py","lineno":914}
+{"timestamp":"2026-11-13T00:14:30.676078Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-11-13T00:14:30.677292Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-11-13T00:14:30.678615Z","level":"info","event":"Task operator:<Task(SQLExecuteQueryOperator): mapid2>","logger":"task.stdout"}

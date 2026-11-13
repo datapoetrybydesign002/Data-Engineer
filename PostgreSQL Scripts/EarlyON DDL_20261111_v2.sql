@@ -30,6 +30,9 @@ CREATE TABLE public.province (
     created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+
+TRUNCATE TABLE public.source_province RESTART IDENTITY CASCADE;
+
 -- Procedure: Load Province
 CREATE OR REPLACE PROCEDURE public.load_target_table_province()
 LANGUAGE plpgsql AS $$
@@ -65,6 +68,9 @@ CREATE TABLE public.servicemanager (
     created_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 CREATE INDEX ix_servicemanager_servicemanager ON public.servicemanager(servicemanager);
+
+
+TRUNCATE TABLE public.source_servicemanager RESTART IDENTITY CASCADE;
 
 -- Clean duplicates from Source
 DELETE FROM public.source_servicemanager 
